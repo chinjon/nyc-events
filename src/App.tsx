@@ -1,6 +1,7 @@
 import { useState, useEffect, Suspense } from 'react'
 import './App.css'
 import createApiQuery from './core/utils/create-api-query';
+import Events from './components/events/events';
 
 const baseApiUrl = "https://data.cityofnewyork.us/resource/tvpp-9vvx.json"
 
@@ -30,6 +31,7 @@ function App() {
       <div>
         <Suspense>
           <div className="table-container">
+            <Events eventsData={data}/>
           </div>
         </Suspense>
       </div>
