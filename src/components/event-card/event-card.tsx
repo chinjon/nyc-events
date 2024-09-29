@@ -1,7 +1,9 @@
-export default function EventCard({eventName}: {eventName: string}) {
+import { Event } from "../../core/types/event.interface";
+
+export default function EventCard(eventInfo: {eventInfo: Event}) {
   return (
     <>
-    <div>{eventName}</div>
+    <div>{eventInfo.eventInfo.event_name}</div>
     </>
   )
 }
