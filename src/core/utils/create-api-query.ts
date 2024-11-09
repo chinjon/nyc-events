@@ -16,8 +16,6 @@ const whereDateQuery = (whereDateFilter: {start: string, end: string}) => {
   return ` AND start_date_time between '${whereDateFilter.start}' and '${whereDateFilter.end}'`
 }
 
-// `%0AWHERE%0A%20 (`start_date_time`%0A%20%20%20%20 BETWEEN "2024-11-11T00%3A00%3A00" %3A%3A floating_timestamp%0A%20%20%20%20 AND "2024-11-11T23%3A45%3A00" %3A%3A floating_timestamp)
-
 const createApiQuery = (queryObj: { limit?: string, excludeType?: string[] }) => {
   let query = "?";
 
