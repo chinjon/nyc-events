@@ -12,7 +12,7 @@ I'm an avid street/documentary photographer that is usually roaming around the c
 
 Also to qualify in renewing my NYC press card, I need to have 6 events documented, so theres some practical motivation.
 
-The NYC Events page is a bit cumbersome on mobile and requires a lot of clicks to get the information you need, while this is a bare-bones web page just outputting parades with active permits
+The [NYC Events](https://www.nyc.gov/events/index.html) page is a bit cumbersome on mobile and requires a lot of clicks to get the information you need, while this is a bare-bones web page just outputting parades with active permits
 
 While I can't put into words the sights one might see at a NYC parade, maybe some people who have documented in video form can (they are also friends, please follow their work):
 
