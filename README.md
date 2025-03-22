@@ -8,10 +8,11 @@ I'm an avid street/documentary photographer that is usually roaming around the c
 
 Also to qualify in renewing my NYC press card, I need to have 6 events documented, so theres some practical motivation.
 
-While I can't put into words the sights one might see at a NYC parade, maybe some people who have documented in video form can:
+While I can't put into words the sights one might see at a NYC parade, maybe some people who have documented in video form can (they are also friends, please follow their work):
 
 * [Paulie B: Easter day parade](https://www.youtube.com/watch?v=WT0dYvMoRQI)
 * [Jared Winslow: St. Patrick's Day parade](https://www.youtube.com/watch?v=psASezft9Eg)
+* [Critical Focus: J'ouvert Parade](https://www.youtube.com/watch?v=ktgy0aCTrx8)
 
 
 ![](https://i.ytimg.com/vi/OKOnmH0qC2k/maxresdefault.jpg)
