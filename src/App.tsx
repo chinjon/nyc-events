@@ -34,15 +34,15 @@ function App() {
             Sourcing data from NYC Opendata, this page should display parades
             with active permits filed. As per the data set page, permits for the
             next month will only be part of the data set. While not a
-            replacement for the 
-            <a href="https://www.nyc.gov/events/index.html" target="_blank">
+            replacement for the&nbsp; 
+            <a href="https://www.nyc.gov/events/index.html" target="_blank"> 
               NYC Events page
             </a>
             , this is just a straight forward reference if you're looking for a
             parade.
           </p>
           <p>
-            This is data straight from 
+            This is data straight from&nbsp;
             <a
               href="https://data.cityofnewyork.us/City-Government/NYC-Permitted-Event-Information/tvpp-9vvx/about_data"
               target="_blank"
