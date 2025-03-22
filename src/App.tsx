@@ -51,7 +51,7 @@ function App() {
             </a>
             , no curation or selection of events is being done, anything tagged as "parade" will be listed.
           </p>
-          <p>This project is not associated with the City of New York. This web page is open source, feel free to contribute.</p>
+          <p>This project is not associated with the City of New York. <a href="https://github.com/chinjon/nyc-events" target="_blank">This web page is open source, feel free to contribute.</a></p>
         </header>
         <Suspense>
           <div className="table-container">
