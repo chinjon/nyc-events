@@ -32,8 +32,8 @@ function App() {
           <h1>Upcoming New York City Parades - 2025</h1>
           <p>
             Sourcing data from NYC Opendata, this page should display parades
-            with active permits filed. As per the data set page, permits for the
-            next month will only be part of the data set. While not a
+            with active permits filed. <span className="bolded-content">As per the data set page, permits for the
+            next month will only be part of the data set.</span> While not a
             replacement for the&nbsp; 
             <a href="https://www.nyc.gov/events/index.html" target="_blank"> 
               NYC Events page

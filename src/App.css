@@ -5,6 +5,10 @@
   gap: 10px;
 }
 
+.bolded-content {
+  font-weight: 700;
+}
+
 .footer-content {
   text-align: center;
   display: flex;

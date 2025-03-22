@@ -45,12 +45,19 @@
 }
 
 .badge {
-  background-color: rgb(31, 163, 146);
   color: white;
   padding: 4px 8px;
   text-align: center;
   border-radius: 5px;
   text-wrap: nowrap;
+}
+
+.borough-badge-color {
+  background-color: rgb(31, 163, 146);
+}
+
+.generic-badge-color {
+  background-color: rgb(248, 67, 67);
 }
 
 @media (max-width: 600px) {
