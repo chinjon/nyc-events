@@ -10,7 +10,7 @@ Using the [NYC Permitted Events data set](https://data.cityofnewyork.us/City-Gov
 
 I'm an avid street/documentary photographer that is usually roaming around the city in my free time with a camera. I'm not an event photographer, but the amount of events and parades that goes on in the city affords me opportunities to document energy and scenes I normally wouldn't get. 
 
-Also to qualify in renewing my NYC press card, I need to have 6 events documented, so theres some practical motivation.
+Also to qualify in renewing my NYC press card, I need to have 6 events documented, so theres some practical motivation. For more information on the [NYC Press Card visit the NYC's website](https://www.nyc.gov/site/mome/press-card/press-card.page), while it is not the most novel press credential, I believe that this gesture is important in the year 2025 and beyond that NYC and The State of New York maintain the importance of the Free Press.
 
 The [NYC Events](https://www.nyc.gov/events/index.html) page is a bit cumbersome on mobile and requires a lot of clicks to get the information you need, while this is a bare-bones web page just outputting parades with active permits
 
