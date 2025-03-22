@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import App from './App.tsx'
 import './reset.css'
+import './minimal.css'
 
 const router = createBrowserRouter([
   {
