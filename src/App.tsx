@@ -32,9 +32,7 @@ function App() {
           <h1>Upcoming New York City Parades - 2025</h1>
           <p>
             Sourcing data from NYC Opendata, this page should display parades
-            with active permits filed. It seems that these permits don't
-            "activate" until closer to date of the parade, hence why parades
-            later in the year are not displaying.
+            with active permits filed. As per the data set page, permits for the next month will only be part of the data set.
           </p>
         </header>
         <Suspense>
