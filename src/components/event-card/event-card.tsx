@@ -20,6 +20,7 @@ export default function EventCard(eventInfo: { eventInfo: Event }) {
             <div>{dateDay}</div>
           </div>
           <div className="event-date-year">{dateYear}</div>
+          <div><span className="badge">{eventInfo.eventInfo.event_borough}</span></div>
         </div>
         <div>
           <div className="event-title">{eventInfo.eventInfo.event_name}</div>
