@@ -49,7 +49,7 @@ function App() {
             >
               NYC Opendata
             </a>
-            , I do not control what events show up, though I am open to
+            , I do not curate what events show up, though I am open to
             filtering out some of the monthly processions.
           </p>
         </header>
