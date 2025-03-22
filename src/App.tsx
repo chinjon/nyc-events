@@ -52,6 +52,7 @@ function App() {
             , I do not curate what events show up, though I am open to
             filtering out some of the monthly processions.
           </p>
+          <p>This project is not associated with the City of New York. This web page is open source, feel free to contribute.</p>
         </header>
         <Suspense>
           <div className="table-container">
