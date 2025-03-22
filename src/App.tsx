@@ -49,8 +49,7 @@ function App() {
             >
               NYC Opendata
             </a>
-            , I do not curate what events show up, though I am open to
-            filtering out some of the monthly processions.
+            , no curation or selection of events is being done.
           </p>
           <p>This project is not associated with the City of New York. This web page is open source, feel free to contribute.</p>
         </header>
