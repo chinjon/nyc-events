@@ -12,3 +12,8 @@
   justify-content: center;
   margin-top: 20px;
 }
+
+.table-container {
+  margin: auto;
+  width: 100%;
+}
