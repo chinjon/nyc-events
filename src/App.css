@@ -1,0 +1,14 @@
+.header-content {
+  margin-bottom: 20px;
+}
+
+
+.footer-content {
+  text-align: center;
+  display: flex;
+  flex-direction: row;  
+  width: 100%;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
