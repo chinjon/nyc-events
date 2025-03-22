@@ -35,11 +35,11 @@ A problem that I have noticed with the data is that the location data is a bit c
 
 Maybe a chance for me to use and learn mapping tools like MapBox and implement that.
 
-Being that this page is so much simpler to what I had scoped out, I might try out HTMX and see if I can make this app even smaller.
+Being that this page is so much simpler to what I had scoped out, I might try out HTMX and see if I can make this app even smaller. I would like to keep the number of dependencies low - so it would minimize potential bugs and keep this going with little maintaining.
 
 ## Instructions
 
-This was made with the vite CLI tool using React and Typescript, which now in hindsight is overkill.
+This was made with the `vite CLI` tool using `React` and `Typescript`, which now in hindsight, is overkill.
 
 Clone repo to your local environment and run:
 
