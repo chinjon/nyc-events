@@ -41,6 +41,8 @@ Being that this page is so much simpler to what I had scoped out, I might try ou
 
 This was made with the `vite CLI` tool using `React` and `Typescript`, which now in hindsight, is overkill.
 
+The stylesheet that was used [is a minimal stylesheet](https://github.com/chr15m/minimal-stylesheet).
+
 Clone repo to your local environment and run:
 
 ```js
