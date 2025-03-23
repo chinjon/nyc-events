@@ -7,11 +7,18 @@
   padding: 20px;
   width: 100%;
   max-width: 600px;
+  align-items: center;
 }
 
 .event-title {
   font-size: larger;
   font-weight: bolder;
+}
+
+.event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .event-type {
