@@ -27,7 +27,7 @@ export default function EventCard(eventInfo: { eventInfo: Event }) {
         </div>
         <div className="event-details">
           <div className="event-title">{eventInfo.eventInfo.event_name}</div>
-          <div><p>{startTime} - {endTime}</p></div>
+          <div><p className="event-times">{startTime} - {endTime}</p></div>
           <div className="badge-row">
           <span className="badge borough-badge-color">{eventInfo.eventInfo.event_borough}</span>
             <span className="badge generic-badge-color">{eventInfo.eventInfo.event_type}</span>
