@@ -66,8 +66,24 @@
   text-wrap: nowrap;
 }
 
-.borough-badge-color {
-  background-color: rgb(31, 163, 146);
+.bronx-badge-color {
+  background-color: rgb(27, 122, 18);
+}
+
+.brooklyn-badge-color {
+  background-color: rgb(34, 50, 141);
+}
+
+.manhattan-badge-color {
+  background-color: rgb(255, 102, 0);
+}
+
+.queens-badge-color {
+  background-color: rgb(255, 0, 0);
+}
+
+.staten-island-badge-color {
+  background-color: rgb(211, 3, 124);
 }
 
 .generic-badge-color {

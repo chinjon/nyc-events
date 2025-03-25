@@ -1,8 +1,7 @@
 import { Event } from "../../core/types/event.interface";
 import "./event-card.css";
-import dayjs from 'dayjs'
-import localizedFormat from 'dayjs/plugin/localizedFormat'
-
+import dayjs from "dayjs";
+import localizedFormat from "dayjs/plugin/localizedFormat";
 
 export default function EventCard(eventInfo: { eventInfo: Event }) {
   dayjs.extend(localizedFormat);
@@ -14,6 +13,14 @@ export default function EventCard(eventInfo: { eventInfo: Event }) {
 
   const startTime = dayjs(startDate).format("LTS");
   const endTime = dayjs(endDate).format("LTS");
+
+  const boroughClassName = (borough: string) => {
+    const boroughNormalized = borough.toLowerCase();
+    if (boroughNormalized != "staten island") {
+      return boroughNormalized;
+    }
+    return boroughNormalized.split(" ").join("-");
+  };
 
   return (
     <>
@@ -27,10 +34,24 @@ export default function EventCard(eventInfo: { eventInfo: Event }) {
         </div>
         <div className="event-details">
           <div className="event-title">{eventInfo.eventInfo.event_name}</div>
-          <div><p className="event-times">{startTime} - {endTime}</p></div>
+          <div>
+            <p className="event-times">
+              {startTime} - {endTime}
+            </p>
+          </div>
           <div className="badge-row">
-          <span className="badge borough-badge-color">{eventInfo.eventInfo.event_borough}</span>
-            <span className="badge generic-badge-color">{eventInfo.eventInfo.event_type}</span>
+            <span
+              className={
+                "badge " +
+                boroughClassName(eventInfo.eventInfo.event_borough as string) +
+                "-badge-color"
+              }
+            >
+              {eventInfo.eventInfo.event_borough}
+            </span>
+            <span className="badge generic-badge-color">
+              {eventInfo.eventInfo.event_type}
+            </span>
           </div>
           <div className="truncate">
             {eventInfo.eventInfo.event_location?.split(",")[0]}
