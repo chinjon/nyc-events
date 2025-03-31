@@ -1,6 +1,6 @@
 import { Event } from "../../core/types/event.interface";
 import "./event-card.css";
-import {format} from "date-fns"
+import { format } from "date-fns";
 
 export default function EventCard(eventInfo: { eventInfo: Event }) {
   const startDate = new Date(eventInfo.eventInfo.start_date_time as string);
