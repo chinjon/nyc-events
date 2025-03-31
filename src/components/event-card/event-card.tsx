@@ -1,18 +1,16 @@
 import { Event } from "../../core/types/event.interface";
 import "./event-card.css";
-import dayjs from "dayjs";
-import localizedFormat from "dayjs/plugin/localizedFormat";
+import {format} from "date-fns"
 
 export default function EventCard(eventInfo: { eventInfo: Event }) {
-  dayjs.extend(localizedFormat);
   const startDate = new Date(eventInfo.eventInfo.start_date_time as string);
   const endDate = new Date(eventInfo.eventInfo.end_date_time as string);
-  const dateMonth = dayjs(startDate).format("MMM");
-  const dateDay = dayjs(startDate).format("DD");
-  const dateYear = dayjs(startDate).format("YYYY");
+  const dateMonth = format(startDate, "LLL");
+  const dateDay = format(startDate, "d");
+  const dateYear = format(startDate, "yyyy");
 
-  const startTime = dayjs(startDate).format("LTS");
-  const endTime = dayjs(endDate).format("LTS");
+  const startTime = format(startDate, "p");
+  const endTime = format(endDate, "p");
 
   const boroughClassName = (borough: string) => {
     const boroughNormalized = borough.toLowerCase();
