@@ -1,0 +1,30 @@
+---
+import EventCard from "../event-card/EventCard.astro";
+import type { Event } from "../../core/types/event.interface";
+import createApiQuery from "../../core/utils/create-api-query";
+const baseApiUrl = "https://data.cityofnewyork.us/resource/tvpp-9vvx.json";
+
+const requestQuery = createApiQuery({ limit: "100" });
+const reqUrl = encodeURI(`${baseApiUrl}${requestQuery}`);
+
+const response = await fetch(reqUrl);
+const data = await response.json();
+
+---
+
+<div class="events-container">
+    {data.map((event: Event) => <EventCard eventInfo={event} />)}
+</div>
+
+<style>
+    .events-container {
+        align-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 100%;
+    }
+</style>

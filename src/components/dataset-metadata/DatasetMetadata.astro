@@ -1,0 +1,32 @@
+---
+import { format } from "date-fns";
+const metaDataApiUrl =
+  "https://data.cityofnewyork.us/api/views/metadata/v1/tvpp-9vvx.json";
+
+const response = await fetch(metaDataApiUrl);
+const data = await response.json();
+---
+
+<div class="metadata-info">
+  This data set was updated by the NYC Office of CECM on:&nbsp;
+  {
+    data && data.dataUpdatedAt
+      ? format(new Date(data.dataUpdatedAt), "PPpp")
+      : ""
+  }
+</div>
+
+<style>
+  .metadata-info {
+    font-size: 18px;
+    background-color: #fff3cd;
+    color: #856404;
+    border-color: #ffeeba;
+    width: 100%;
+    border: 1px solid transparent;
+    margin: 0 auto 15px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+  }
+</style>
