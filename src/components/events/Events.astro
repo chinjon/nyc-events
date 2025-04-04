@@ -1,7 +1,7 @@
 ---
 import EventCard from "../event-card/EventCard.astro";
-import type { Event } from "../../../cra/src/core/types/event.interface";
-import createApiQuery from "../../../cra/src/core/utils/create-api-query";
+import type { Event } from "../../core/types/event.interface";
+import createApiQuery from "../../core/utils/create-api-query";
 const baseApiUrl = "https://data.cityofnewyork.us/resource/tvpp-9vvx.json";
 
 const requestQuery = createApiQuery({ limit: "100" });
