@@ -1,0 +1,15 @@
+---
+import {format} from "date-fns";
+const metaDataApiUrl =
+"https://data.cityofnewyork.us/api/views/metadata/v1/tvpp-9vvx.json";
+
+const response = await fetch(metaDataApiUrl);
+const data = await response.json();
+
+---
+
+<div class="metadata-info">This data set was updated by the NYC Office of CECM on:&nbsp; 
+    {data && data.dataUpdatedAt
+      ? format(new Date(data.dataUpdatedAt), "PPpp")
+      : ""}
+  </div>

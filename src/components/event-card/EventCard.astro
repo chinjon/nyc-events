@@ -1,0 +1,164 @@
+---
+
+const { eventInfo } = Astro.props;
+import { format } from "date-fns";
+
+const startDate = new Date(eventInfo.start_date_time as string);
+  const endDate = new Date(eventInfo.end_date_time as string);
+  const dateMonth = format(startDate, "LLL");
+  const dateDay = format(startDate, "d");
+  const dateYear = format(startDate, "yyyy");
+
+  const startTime = format(startDate, "p");
+  const endTime = format(endDate, "p");
+
+  const boroughClassName = (borough: string) => {
+    const boroughNormalized = borough.toLowerCase();
+    if (boroughNormalized != "staten island") {
+      return boroughNormalized;
+    }
+    return boroughNormalized.split(" ").join("-");
+  };
+
+---
+
+<div class="event-card">
+    <div class="event-date">
+      <div class="event-date-month-day">
+        <div>{dateMonth}</div>
+        <div>{dateDay}</div>
+      </div>
+      <div class="event-date-year">{dateYear}</div>
+    </div>
+    <div class="event-details">
+      <div class="event-title">{eventInfo.event_name}</div>
+      <div>
+        <p class="event-times">
+          {startTime} - {endTime}
+        </p>
+      </div>
+      <div class="badge-row">
+        <span
+          class={
+            "badge " +
+            boroughClassName(eventInfo.event_borough as string) +
+            "-badge-color"
+          }
+        >
+          {eventInfo.event_borough}
+        </span>
+        <span class="badge generic-badge-color">
+          {eventInfo.event_type}
+        </span>
+      </div>
+      <div class="truncate">
+        {eventInfo.event_location?.split(",")[0]}
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .event-card {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #000;
+  border-radius: 10px;
+  gap: 25px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  align-items: center;
+}
+
+.event-title {
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.event-times {
+  font-style: italic;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.event-type {
+  font-size: medium;
+  font-weight: bold;
+  ;
+}
+
+.truncate {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.event-date {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-date-month-day {
+  display: flex;
+  flex-direction: row;
+  font-size: 27px;
+  font-weight: 900;
+  gap: 5px;
+  font-style: italic;
+}
+
+.event-date-year {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.badge {
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+  text-wrap: nowrap;
+}
+
+.bronx-badge-color {
+  background-color: rgb(27, 122, 18);
+}
+
+.brooklyn-badge-color {
+  background-color: rgb(34, 50, 141);
+}
+
+.manhattan-badge-color {
+  background-color: rgb(255, 102, 0);
+}
+
+.queens-badge-color {
+  background-color: rgb(255, 0, 0);
+}
+
+.staten-island-badge-color {
+  background-color: rgb(211, 3, 124);
+}
+
+.generic-badge-color {
+  background-color: rgb(248, 67, 67);
+}
+
+.badge-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .event-card {
+    max-width: 80vw;
+  }
+}
+  </style>
