@@ -8,12 +8,14 @@ const data = await response.json();
 ---
 
 <div class="metadata-info">
-  This data set was updated by the NYC Office of CECM on:&nbsp;
-  {
-    data && data.dataUpdatedAt
-      ? format(new Date(data.dataUpdatedAt), "PPpp")
-      : ""
-  }
+  This data set was updated by the NYC Office of CECM on:
+  <span class="metadata-date-text">
+    {
+      data && data.dataUpdatedAt
+        ? format(new Date(data.dataUpdatedAt), "PPpp")
+        : ""
+    }
+  </span>
 </div>
 
 <style>
@@ -22,11 +24,21 @@ const data = await response.json();
     background-color: #fff3cd;
     color: #856404;
     border-color: #ffeeba;
-    width: 100%;
     border: 1px solid transparent;
-    margin: 0 auto 15px;
-    text-align: center;
+    margin: 10px;
     padding: 20px;
     border-radius: 10px;
+    font-weight: bolder;
+  }
+
+  .metadata-date-text {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 600px) {
+    .metadata-info {
+      text-align: center;
+      font-size: 15px;
+    }
   }
 </style>
