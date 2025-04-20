@@ -29,23 +29,11 @@ While I can't put into words the sights one might see at a NYC parade, maybe som
 
 Probably not a lot is going to be done, I had planned this web page to be a total replacement of the NYC Events page, but a few photographer friends lamented at the difficulties at finding events, so I just shortened the scope. I didn't want to add styling besides using a minimal stylesheet.
 
-I'll try to pretty this up with some more styling to make it easier for glancing.
-
-A problem that I have noticed with the data is that the location data is a bit cumbersome, listing out every street that is affected by closures. I split the text, only display the first cross street listed, but I'll need to figure out a better way of parsing out that data.
-
-Maybe a chance for me to use and learn mapping tools like MapBox and implement that.
-
-Being that this page is so much simpler to what I had scoped out, I might try out HTMX and see if I can make this app even smaller. I would like to keep the number of dependencies low - so it would minimize potential bugs and keep this going with little maintaining.
-
 ## Instructions
 
-This was made with the `vite CLI` tool using `React` and `Typescript`, which now in hindsight, is overkill.
+This project uses `astro` due to the simplicity and lack of features:
 
-The stylesheet that was used [is a minimal stylesheet](https://github.com/chr15m/minimal-stylesheet).
-
-Clone repo to your local environment and run:
-
-```js
+```console
 npm install
 
 npm run dev
