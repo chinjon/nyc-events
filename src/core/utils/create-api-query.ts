@@ -1,5 +1,9 @@
 import { formatISO, startOfYear, endOfYear } from "date-fns";
 
+/**
+ * @todo clean up this file
+ */
+
 const whereQuery = (whereFilter: { prop: string, conditional: string, value: string }[]) => {
   const filterQueries = whereFilter.map((filter) => `${filter.prop} ${filter.conditional} '${filter.value}'`);
   return `&$where=${filterQueries.join(' AND ')}`;

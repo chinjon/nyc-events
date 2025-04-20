@@ -1,6 +1,7 @@
 ---
 const { eventInfo } = Astro.props;
 import { format } from "date-fns";
+import { boroughClassName } from "./event-card-utils"
 
 const startDate = new Date(eventInfo.start_date_time as string);
 const endDate = new Date(eventInfo.end_date_time as string);
@@ -11,13 +12,6 @@ const dateYear = format(startDate, "yyyy");
 const startTime = format(startDate, "p");
 const endTime = format(endDate, "p");
 
-const boroughClassName = (borough: string) => {
-  const boroughNormalized = borough.toLowerCase();
-  if (boroughNormalized != "staten island") {
-    return boroughNormalized;
-  }
-  return boroughNormalized.split(" ").join("-");
-};
 ---
 
 <div class="event-card">
