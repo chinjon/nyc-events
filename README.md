@@ -27,7 +27,9 @@ While I can't put into words the sights one might see at a NYC parade, maybe som
 
 ## Improvements
 
-Probably not a lot is going to be done, I had planned this web page to be a total replacement of the NYC Events page, but a few photographer friends lamented at the difficulties at finding events, so I just shortened the scope. I didn't want to add styling besides using a minimal stylesheet.
+* audit accessibility of page
+* add borough filter
+* add basic tests for opendata api
 
 ## Instructions
 
