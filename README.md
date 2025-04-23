@@ -30,6 +30,7 @@ While I can't put into words the sights one might see at a NYC parade, maybe som
 * audit accessibility of page
 * add borough filter
 * add basic tests for opendata api
+* streamline css
 
 ## Instructions
 
