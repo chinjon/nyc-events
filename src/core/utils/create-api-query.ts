@@ -1,4 +1,5 @@
 import { formatISO, startOfYear, endOfYear } from "date-fns";
+export const prerender = true;
 
 /**
  * @todo clean up this file
