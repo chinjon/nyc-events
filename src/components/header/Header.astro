@@ -3,7 +3,7 @@
 ---
 
 <header class="header-content">
-  <h1>Upcoming New York City Parades - 2025</h1>
+  <h1 class="header-title">Upcoming N.Y.C. Parades</h1>
   <p>
     Sourcing data from NYC Opendata, this page should display parades with
     active permits filed.
@@ -36,8 +36,13 @@
   }
   
   @media (max-width: 600px) {
+    .header-title {
+      font-size: 1.7rem;
+    }    
+
     .header-content {
-      text-align: center;
+      text-align: initial;
+      font-size: 14px;
     }
   }
 </style>
