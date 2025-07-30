@@ -2,7 +2,7 @@
 export const prerender = true;
 const { eventInfo } = Astro.props;
 import { format } from "date-fns";
-import { boroughClassName } from "./event-card-utils"
+import { boroughClassName } from "./event-card-utils";
 
 const startDate = new Date(eventInfo.start_date_time as string);
 const endDate = new Date(eventInfo.end_date_time as string);
@@ -12,7 +12,6 @@ const dateYear = format(startDate, "yyyy");
 
 const startTime = format(startDate, "p");
 const endTime = format(endDate, "p");
-
 ---
 
 <div class="event-card">
@@ -42,7 +41,7 @@ const endTime = format(endDate, "p");
         {eventInfo.event_type}
       </span>
     </div>
-    <div class="truncate">
+    <div class="truncate event-location">
       {eventInfo.event_location?.split(",")[0]}
     </div>
   </div>
@@ -149,6 +148,22 @@ const endTime = format(endDate, "p");
   @media (max-width: 600px) {
     .event-card {
       max-width: 80vw;
+      font-size: 16px;
+    }
+
+    .event-details {
+      font-size: 16px;
+    }
+
+    .event-location,
+    .badge {
+      font-size: 15px;
+    }
+
+    .event-date-month-day,
+    .event-date-year,
+    .event-title {
+      font-size: 17px;
     }
   }
 </style>
