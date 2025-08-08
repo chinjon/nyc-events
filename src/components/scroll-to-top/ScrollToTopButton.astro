@@ -1,0 +1,28 @@
+<div class="scroll-button-container">
+  <button class="scroll-top-button">Go to top</button>
+</div>
+
+<script>
+  const button = document.querySelector(".scroll-top-button");
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  button?.addEventListener("click", () => {
+    scrollToTop();
+  });
+</script>
+
+<style>
+  .scroll-button-container {
+    position: sticky;
+    bottom: 10px;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    flex-direction: row-reverse
+  }
+</style>
