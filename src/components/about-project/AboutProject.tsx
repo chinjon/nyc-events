@@ -29,7 +29,7 @@ export const AboutProject = () => {
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>About this project</AlertDialogTitle>
+          <AlertDialogTitle>About</AlertDialogTitle>
           <AlertDialogDescription></AlertDialogDescription>
         </AlertDialogHeader>
         <Card>
