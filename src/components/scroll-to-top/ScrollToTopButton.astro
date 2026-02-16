@@ -1,9 +1,12 @@
-<div class="scroll-button-container">
-  <button class="scroll-top-button">Go to top</button>
+---
+import {CircleArrowUp} from 'lucide-react';
+---
+<div class="sticky w-[100%] justify-items-end bottom-10 flex flex-row-reverse z-40">
+  <button id="scroll-top-button" class="hover:cursor-pointer"><CircleArrowUp /></button>
 </div>
 
 <script>
-  const button = document.querySelector(".scroll-top-button");
+  const button = document.querySelector("#scroll-top-button");
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -15,20 +18,3 @@
     scrollToTop();
   });
 </script>
-
-<style>
-  .scroll-button-container {
-    position: sticky;
-    bottom: 10px;
-    display: flex;
-    align-items: flex-end;
-    width: 100%;
-    flex-direction: row-reverse
-  }
-
-  @media (max-width: 600px) {
-    .scroll-button-container {
-      bottom: 40px;
-    }
-  }
-</style>
