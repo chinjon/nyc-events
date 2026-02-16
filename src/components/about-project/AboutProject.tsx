@@ -66,7 +66,7 @@ export const AboutProject = () => {
                 className="underline"
               >
                 jonathan chin
-              </a>.
+              </a>. No AI-generated code is leveraged in this project.
             </p>
           </CardContent>
         </Card>
