@@ -58,7 +58,7 @@ export const AboutProject = () => {
               for the next month.
             </p>
             <p>
-              This project is maintained by{" "}
+              No AI-generated code is leveraged in this project. This project is maintained by{" "}
               <a
                 href="https://github.com/chinjon"
                 target="_blank"
@@ -66,7 +66,7 @@ export const AboutProject = () => {
                 className="underline"
               >
                 jonathan chin
-              </a>. No AI-generated code is leveraged in this project.
+              </a>.
             </p>
           </CardContent>
         </Card>
