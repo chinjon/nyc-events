@@ -17,12 +17,13 @@ const orgs = [
   {
     label: "Bronx Defenders",
     url: "https://www.bronxdefenders.org/",
+    key: "bronx-defenders"
   },
-  { label: "Bronx Documentary Center", url: "https://www.bronxdoc.org/" },
-  { label: "City Harvest", url: "https://www.cityharvest.org/" },
-  { label: "Make the Road NY", url: "https://maketheroadny.org/" },
-  { label: "New York Immigrant Coalition", url: "https://www.nyic.org/" },
-  { label: "Think!Chinatown", url: "https://www.thinkchinatown.org/" },
+  { label: "Bronx Documentary Center", url: "https://www.bronxdoc.org/", key: "bronx-documentary-center" },
+  { label: "City Harvest", url: "https://www.cityharvest.org/", key: "city-harvest" },
+  { label: "Make the Road NY", url: "https://maketheroadny.org/", key: "make-the-road-ny"},
+  { label: "New York Immigrant Coalition", url: "https://www.nyic.org/", key: "new-york-immigrant-coalition" },
+  { label: "Think!Chinatown", url: "https://www.thinkchinatown.org/", key: "think-chinatown" },
 ];
 
 export const Support = () => {
@@ -50,7 +51,7 @@ export const Support = () => {
             <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
               {orgs.map((org) => {
                 return (
-                  <li>
+                  <li key={org.key}>
                     <a href={org.url} rel="noopener" target="_blank" className="underline hover:cursor-pointer">
                       {org.label}
                     </a>
@@ -61,7 +62,7 @@ export const Support = () => {
           </CardContent>
         </Card>
         <AlertDialogFooter>
-          <AlertDialogCancel className="hover:cursor-pointer" onClick={handleToggle}>Close</AlertDialogCancel>
+          <AlertDialogCancel  onClick={handleToggle}>Close</AlertDialogCancel>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
