@@ -3,6 +3,14 @@ export const prerender = true;
 const { eventInfo } = Astro.props;
 import { format } from "date-fns";
 import { boroughClassName } from "./event-card-utils";
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  CardContent,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const startDate = new Date(eventInfo.start_date_time as string);
 const endDate = new Date(eventInfo.end_date_time as string);
@@ -14,157 +22,17 @@ const startTime = format(startDate, "p");
 const endTime = format(endDate, "p");
 ---
 
-<div class="event-card">
-  <div class="event-date">
-    <div class="event-date-month-day">
-      <div>{dateMonth}</div>
-      <div>{dateDay}</div>
+<Card class="event-card">
+  <CardHeader class="event-date">
+    <CardTitle>{`${dateMonth} ${dateDay} ${dateYear}`} </CardTitle>
+    <CardDescription>{startTime} - {endTime}</CardDescription>
+  </CardHeader>
+  <CardContent>
+    <p>{eventInfo.event_name}</p>
+    <p>{eventInfo.event_location?.split(",")[0]}</p>
+    <div class="flex flex-row gap2">
+      <Badge>{eventInfo.event_borough}</Badge>
+      <Badge>{eventInfo.event_type}</Badge>
     </div>
-    <div class="event-date-year">{dateYear}</div>
-  </div>
-  <div class="event-details">
-    <div class="event-title">{eventInfo.event_name}</div>
-    <div>
-      <p class="event-times">
-        {startTime} - {endTime}
-      </p>
-    </div>
-    <div class="badge-row">
-      <span
-        class={"badge " +
-          boroughClassName(eventInfo.event_borough as string) +
-          "-badge-color"}
-      >
-        {eventInfo.event_borough}
-      </span>
-      <span class="badge generic-badge-color">
-        {eventInfo.event_type}
-      </span>
-    </div>
-    <div class="truncate event-location">
-      {eventInfo.event_location?.split(",")[0]}
-    </div>
-  </div>
-</div>
-
-<style>
-  .event-card {
-    display: flex;
-    flex-direction: row;
-    border: 1.5px solid #fff;
-    border-radius: 5px;
-    gap: 25px;
-    padding: 20px;
-    width: 100%;
-    max-width: 600px;
-    align-items: center;
-    color: #fff;
-  }
-
-  .event-title {
-    font-size: larger;
-    font-weight: bolder;
-  }
-
-  .event-details {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .event-times {
-    font-style: italic;
-    font-weight: 600;
-    text-decoration: underline;
-  }
-
-  .event-type {
-    font-size: medium;
-    font-weight: bold;
-  }
-
-  .truncate {
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-
-  .event-date {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .event-date-month-day {
-    display: flex;
-    flex-direction: row;
-    font-size: 27px;
-    font-weight: 900;
-    gap: 5px;
-    font-style: italic;
-  }
-
-  .event-date-year {
-    font-size: 25px;
-    font-weight: 700;
-    letter-spacing: 1px;
-  }
-
-  .badge {
-    color: white;
-    padding: 4px 8px;
-    text-align: center;
-    border-radius: 5px;
-    text-wrap: nowrap;
-  }
-
-  .bronx-badge-color {
-    background-color: rgb(27, 122, 18);
-  }
-
-  .brooklyn-badge-color {
-    background-color: rgb(34, 50, 141);
-  }
-
-  .manhattan-badge-color {
-    background-color: rgb(255, 102, 0);
-  }
-
-  .queens-badge-color {
-    background-color: rgb(255, 0, 0);
-  }
-
-  .staten-island-badge-color {
-    background-color: rgb(211, 3, 124);
-  }
-
-  .generic-badge-color {
-    background-color: rgb(248, 67, 67);
-  }
-
-  .badge-row {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-  }
-
-  @media (max-width: 600px) {
-    .event-card {
-      max-width: 80vw;
-      font-size: 16px;
-    }
-
-    .event-details {
-      font-size: 16px;
-    }
-
-    .event-location,
-    .badge {
-      font-size: 15px;
-    }
-
-    .event-date-month-day,
-    .event-date-year,
-    .event-title {
-      font-size: 17px;
-    }
-  }
-</style>
+  </CardContent>
+</Card>

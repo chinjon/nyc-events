@@ -13,18 +13,6 @@ const response = await fetch(reqUrl);
 const data = await response.json();
 ---
 
-<div class="events-container">
+<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
   {data.map((event: Event) => <EventCard eventInfo={event} />)}
 </div>
-
-<style>
-  .events-container {
-    align-content: center;
-    align-items: center;
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 100%;
-  }
-</style>
