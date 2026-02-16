@@ -29,11 +29,10 @@ const endTime = format(endDate, "p");
   </CardHeader>
   <CardContent>
     <p>{eventInfo.event_name}</p>
+    <p>{eventInfo.event_location?.split(",")[0]}</p>
     <div class="flex flex-row gap2">
       <Badge>{eventInfo.event_borough}</Badge>
       <Badge>{eventInfo.event_type}</Badge>
     </div>
-    <p>{eventInfo.event_location?.split(",")[0]}</p>
   </CardContent>
 </Card>
-
