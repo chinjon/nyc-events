@@ -33,9 +33,9 @@ const endTime = format(endDate, "p");
     <CardDescription>{startTime} - {endTime}</CardDescription>
   </CardHeader>
   <CardContent className="flex flex-col gap-2">
-    <p class="text-lg font-semibold">{eventInfo.event_name}</p>
+    <p class="text-lg font-semibold text-pretty text-balance">{eventInfo.event_name}</p>
     <Separator />
-    <p class="text-[15px]">{eventInfo.event_location?.split(",")[0]}</p>
+    <p class="text-[15px] text-pretty">{eventInfo.event_location?.split(",")[0]}</p>
   </CardContent>
   <CardFooter className="flex flex-row gap-2">
     <Badge className={cn(boroughBadgeStyle(eventInfo.event_borough))}
