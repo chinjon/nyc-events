@@ -1,5 +1,10 @@
 ---
 import { format } from "date-fns";
+
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { CheckCircle2Icon, InfoIcon } from "lucide-react"
+import { cn } from "@/lib/utils";
+
 const metaDataApiUrl =
   "https://data.cityofnewyork.us/api/views/metadata/v1/tvpp-9vvx.json";
 
@@ -7,38 +12,17 @@ const response = await fetch(metaDataApiUrl);
 const data = await response.json();
 ---
 
-<div class="metadata-info">
+<Alert className={cn("border-sky-200 bg-sky-50 text-sky-900 dark:border-sky-900 dark:bg-sky-950 dark:text-sky-50")}>
+  <InfoIcon />
+  <AlertTitle>Data set version</AlertTitle>
+  <AlertDescription>
   This data set was updated by the NYC Office of CECM on:
-  <span class="metadata-date-text">
+
     {
       data && data.dataUpdatedAt
         ? format(new Date(data.dataUpdatedAt), "PPpp")
         : ""
     }
-  </span>
-</div>
+  </AlertDescription>
 
-<style>
-  .metadata-info {
-    font-size: 18px;
-    background-color: #fff3cd;
-    color: #856404;
-    border-color: #ffeeba;
-    border: 1px solid transparent;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 10px;
-    font-weight: bolder;
-  }
-
-  .metadata-date-text {
-    text-decoration: underline;
-  }
-
-  @media (max-width: 600px) {
-    .metadata-info {
-      text-align: center;
-      font-size: 15px;
-    }
-  }
-</style>
+</Alert>
