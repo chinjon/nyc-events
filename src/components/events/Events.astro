@@ -13,6 +13,6 @@ const response = await fetch(reqUrl);
 const data = await response.json();
 ---
 
-<div class="grid grid-cols-2 gap-4">
+<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
   {data.map((event: Event) => <EventCard eventInfo={event} />)}
 </div>
