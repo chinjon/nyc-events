@@ -1,11 +1,13 @@
 ---
 import { ModeToggle } from "../ModeToggle";
 import { AboutProject } from "../about-project/AboutProject";
+import {Support} from "../support/Support";
 ---
 
-<header class="header-content">
+<header class="header-content flex flex-col gap-4">
   <div class="flex flex-row-reverse w-full gap-4">
     <ModeToggle client:load />
+    <Support client:load />
     <AboutProject client:load />
   </div>
   <h1 class="text-center text-4xl font-extrabold tracking-tight text-balance">

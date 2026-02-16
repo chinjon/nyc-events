@@ -23,7 +23,7 @@ export const AboutProject = () => {
   return (
     <AlertDialog open={toggle}>
       <AlertDialogTrigger asChild>
-        <Button variant="outline" onClick={handleToggle}>
+        <Button variant="outline" className="hover:cursor-pointer" onClick={handleToggle}>
           About
         </Button>
       </AlertDialogTrigger>
@@ -71,7 +71,7 @@ export const AboutProject = () => {
           </CardContent>
         </Card>
         <AlertDialogFooter>
-          <AlertDialogCancel onClick={handleToggle}>Close</AlertDialogCancel>
+          <AlertDialogCancel className="hover:cursor-pointer" onClick={handleToggle}>Close</AlertDialogCancel>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
