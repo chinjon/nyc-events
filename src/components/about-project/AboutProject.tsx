@@ -29,7 +29,7 @@ export const AboutProject = () => {
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>About this project</AlertDialogTitle>
+          <AlertDialogTitle>About</AlertDialogTitle>
           <AlertDialogDescription></AlertDialogDescription>
         </AlertDialogHeader>
         <Card>
@@ -58,7 +58,7 @@ export const AboutProject = () => {
               for the next month.
             </p>
             <p>
-              This project is maintained by{" "}
+              No AI-generated code is leveraged in this project. This project is maintained by{" "}
               <a
                 href="https://github.com/chinjon"
                 target="_blank"
